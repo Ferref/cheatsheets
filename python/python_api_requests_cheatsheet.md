@@ -175,4 +175,15 @@ for _, row in df.iterrows():
 
 ---
 
+### Load xlsx into DataFrame from web
+```python
+import requests
+import pandas as pd
+from io import StringIO
+
+url = 'https://www.hbs.edu/behavioral-finance-and-financial-stability/Documents/ChartData/MapCharts/20160923_global_crisis_data.xlsx'
+df = pd.read_excel(url)
+df
+```
+
 This cheatsheet covers advanced handling of APIs, downloading CSV files, error handling, and efficient memory management for large files using `requests` and `pandas`.
