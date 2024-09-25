@@ -237,4 +237,33 @@ git config --global alias.st status
 
 ---
 
+
+## Create GitHub Repo from VS Code Terminal
+
+1. **Open Terminal in VS Code**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   ```
+
+2. **Rename `master` to `main`**
+   ```bash
+   git branch -M main
+   ```
+
+3. **Create GitHub Repo**
+   ```bash
+   gh repo create <repo-name> --public --source=. --remote=origin
+   ```
+
+4. **Push to GitHub**
+   ```bash
+   git push -u origin main
+   ```
+
+> **Note:** Use `gh auth login` if not authenticated. Replace `<repo-name>` with your repository name.
+
+---
+
 This cheatsheet covers essential GitHub commands and workflows for both basic and advanced users. Happy coding!
