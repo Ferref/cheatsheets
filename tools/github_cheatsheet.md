@@ -266,4 +266,38 @@ git config --global alias.st status
 
 ---
 
-This cheatsheet covers essential GitHub commands and workflows for both basic and advanced users. Happy coding!
+# How to Copy a GitHub Repository to Another (Preserving Commits)
+
+To copy a GitHub repository to a new repository while keeping the commit history intact, follow these steps:
+
+1. **Clone the Original Repository**
+   
+   ```bash
+   git clone https://github.com/username/original-repo.git
+   ```
+
+2. **Navigate to the Cloned Repository Folder**
+
+   ```bash
+   cd original-repo
+   ```
+
+3. **Remove the Remote Origin**
+   
+   ```bash
+   git remote remove origin
+   ```
+
+4. **Add the New Remote Repository**
+   
+   ```bash
+   git remote add origin https://github.com/username/new-repo.git
+   ```
+
+5. **Push to the New Repository**
+   
+   ```bash
+   git push -u origin main
+   ```
+
+Replace `main` with your default branch name if it's different.
